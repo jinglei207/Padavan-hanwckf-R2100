@@ -49,11 +49,11 @@ jobs:
         
         ################################################################################################
         sed -i '/iptables reconfig (firewall update)/a iptables -I FORWARD -d 192.168.1.0/16 -j DROP\niptables -I FORWARD -d 192.168.1.254 -j ACCEPT\niptables -I FORWARD -d 192.168.1.1 -j ACCEPT' user/scripts/mtd_storage.sh
-        sed -i "s/192.168.2/10.0.0/g" user/shared/defaults.h
-        sed -i "s/ntp1.aliyun.com/pool.ntp.org/g" user/shared/defaults.h
-        sed -i "s/CST-8/MEZ-1MESZ_1/g" user/shared/defaults.h
-        sed -i "s/CN/EU/g" user/shared/defaults.h
-        sed -i "s/US/EU/g" user/shared/defaults.h
+        sed -i 's/192.168.2/10.0.0/g' user/shared/defaults.h
+        sed -i 's/"ntp1.aliyun.com"/"pool.ntp.org"/g' user/shared/defaults.h
+        sed -i 's/"CST-8"/"MEZ-1MESZ_1"/g' user/shared/defaults.h
+        sed -i 's/"CN"/"EU"/g' user/shared/defaults.h
+        sed -i 's/"US"/"EU"/g' user/shared/defaults.h
         ################################################################################################
         
         
